@@ -29,7 +29,6 @@ public class OneFragment extends Fragment {
     boolean success = true;
     if (!dir.exists()){
       success = dir.mkdir();
-      Log.d("nee", "ja");
     }
     File[] files = dir.listFiles();
     for (File file : files) {
