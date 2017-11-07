@@ -2,21 +2,11 @@ package com.example.crisp.test;
 
 
 import android.os.Bundle;
-import android.os.Environment;
-import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
 import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ListView;
 
 import java.io.File;
-import java.io.FileFilter;
-import java.sql.Array;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 
 public class OneFragment extends Fragment {
@@ -39,6 +29,7 @@ public class OneFragment extends Fragment {
     boolean success = true;
     if (!dir.exists()){
       success = dir.mkdir();
+      Log.d("nee", "ja");
     }
     File[] files = dir.listFiles();
     for (File file : files) {
