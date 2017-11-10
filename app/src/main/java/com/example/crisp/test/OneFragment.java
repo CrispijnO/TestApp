@@ -2,11 +2,15 @@ package com.example.crisp.test;
 
 
 import android.os.Bundle;
+import android.provider.ContactsContract;
+import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 
 public class OneFragment extends Fragment {
@@ -21,20 +25,40 @@ public class OneFragment extends Fragment {
     getFiles();
   }
 
-  private ArrayList<String> songFiles = new ArrayList<String>();
+  private ArrayList<File> songFiles = new ArrayList<File>();
 
 
-  public void getFiles(){
+  public void getFiles() {
     File dir = new File("storage/extSdCard/Music/");
     boolean success = true;
-    if (!dir.exists()){
+
+    if (!dir.exists()) {
       success = dir.mkdir();
     }
-    File[] files = dir.listFiles();
-    for (File file : files) {
-      Log.d(file.toString(), "getFiles() returned: " );
+
+    File[] tempFiles = dir.listFiles();
+
+    List<File> files = new ArrayList<File>(Arrays.asList(tempFiles));
+    System.out.println(files);
+
+    for (int i = 0; i < files.; i++) {
+      File file = files[i];
+      if (!file.isDirectory()) {
+        songFiles.add(file);
+        System.out.println("Success");
+      }
+      else {
+        File newDir = new File(file.toString());
+        files = newDir.listFiles();
+        System.out.println(file);
+      }
+
     }
+    System.out.println(songFiles);
   }
+}
+
+
 
 
 
@@ -90,4 +114,3 @@ public class OneFragment extends Fragment {
 //
 //    return null;
 //  }
-}
