@@ -41,14 +41,16 @@ public class MainActivity extends AppCompatActivity {
     getFiles();
   }
 
-  public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-    View view = inflater.inflate(R.layout.fragment_one, container, false);
-    ListView lv = (ListView)findViewById(R.id.songList);
-    ArrayAdapter adapter = new ArrayAdapter<>(this, R.layout.fragment_one, R.id.songList, songFiles);
-    lv.setAdapter(adapter);
-    adapter.notifyDataSetChanged();
-    return view;
-  }
+//  View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+//    System.out.println(songFiles);
+//    System.out.println("afs");
+//    View view = inflater.inflate(R.layout.fragment_one, container, false);
+//    ListView lv = (ListView)view.findViewById(R.id.songList);
+//    ArrayAdapter adapter = new ArrayAdapter<>(this, R.layout.fragment_one, R.id.songList, songFiles);
+//    lv.setAdapter(adapter);
+//    adapter.notifyDataSetChanged();
+//    return view;
+//  }
 
   private void setupViewPager(ViewPager viewPager) {
     ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
@@ -118,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
           }
 
         }
-        System.out.println(songFiles);
+//        System.out.println(songFiles);
       }
 
   public static String splitExt(String args) {

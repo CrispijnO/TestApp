@@ -1,16 +1,33 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:tools="http://schemas.android.com/tools"
-  android:id="@+id/songList2"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
   tools:context="com.example.crisp.test.OneFragment">
 
-
   <ListView
-    android:id="@+id/songList"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+  android:id="@+id/songList"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
 
   </ListView>
 
-</RelativeLayout>
+</TextView>
+
+
+
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+  <!--xmlns:tools="http://schemas.android.com/tools"-->
+  <!--android:id="@+id/songList2"-->
+  <!--android:layout_width="match_parent"-->
+  <!--android:layout_height="match_parent"-->
+  <!--tools:context="com.example.crisp.test.OneFragment">-->
+
+
+  <!--<TextView-->
+    <!--android:id="@+id/songList"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent">-->
+
+  <!--</TextView>-->
+
+<!--</RelativeLayout>-->
